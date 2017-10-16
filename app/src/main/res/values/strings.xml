@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Test Weather</string>
+
+    <string name="cel">°C</string>
+
+    <string name="Pressure">Pressure:" "</string>
+    <string name="humidity">Humidity:" "</string>
+    <string name="mintemp">Min. Temperature:" "</string>
+    <string name="pressureMeasurement">" "mb</string>
+
+    <string name="maxtemp">Max. Temperature:" "</string>
+    <string name="per">%</string>
+    <string name="wind">Wind:" "</string>
+    <string name="deg">°</string>
+    <string name="winddirection">Wind Degree: " "</string>
+    <string name="speedmeasurement">" "km/h," "</string>
+</resources>

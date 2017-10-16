@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Card_RestaurantCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:clickable="false"
+    card_view:cardBackgroundColor="#ffffff"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="10dp">
+
+    <ImageView
+        android:id="@+id/close_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_close"
+        android:tint="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginRight="80dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/cityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                tools:text="Cairo" />
+
+            <TextView
+                android:id="@+id/cityTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityTitle"
+                android:textColor="#1F384D"
+                android:textSize="32sp"
+                tools:text="25" />
+
+            <TextView
+                android:id="@+id/celsius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityTitle"
+                android:layout_toEndOf="@id/cityTemp"
+                android:text="@string/cel"
+                android:textColor="#1F384D"
+                android:textSize="18sp"
+                android:layout_toRightOf="@id/cityTemp" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityTemp"
+                android:textColor="#1F384D"
+                android:textSize="18sp"
+                tools:text="" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/R_minTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tempLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mintemp"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/minTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tempLab"
+                    android:layout_toEndOf="@id/tempLab"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    tools:text="25"
+                    android:layout_toRightOf="@id/tempLab" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tempLab"
+                    android:layout_toEndOf="@id/minTemp"
+                    android:text="@string/cel"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/minTemp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/R_maxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/maxTempLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maxtemp"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/maxTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/maxTempLab"
+                    android:layout_toEndOf="@id/maxTempLab"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    tools:text="25"
+                    android:layout_toRightOf="@id/maxTempLab" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/maxTempLab"
+                    android:layout_toEndOf="@id/maxTemp"
+                    android:text="@string/cel"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/maxTemp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/R_Hum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/humLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/humidity"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/cityHum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/humLab"
+                    android:layout_toEndOf="@id/humLab"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    tools:text="83"
+                    android:layout_toRightOf="@id/humLab" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/humLab"
+                    android:layout_toEndOf="@id/cityHum"
+                    android:text="@string/per"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/cityHum" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/R_Pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/pressureLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Pressure"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/pressureLab"
+                    android:layout_toEndOf="@id/pressureLab"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    tools:text="25"
+                    android:layout_toRightOf="@id/pressureLab" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/pressureLab"
+                    android:layout_toEndOf="@id/pressure"
+                    android:text="@string/pressureMeasurement"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/pressure" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/R_Wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/windLab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wind"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/wind_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/windLab"
+                    android:layout_toEndOf="@id/windLab"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    tools:text="9"
+                    android:layout_toRightOf="@id/windLab" />
+
+                <TextView
+                    android:id="@+id/windSpeedMeasurement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/windLab"
+                    android:layout_toEndOf="@id/wind_speed"
+                    android:text="@string/speedmeasurement"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/wind_speed" />
+
+                <TextView
+                    android:id="@+id/wind_deg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/windLab"
+                    android:layout_toEndOf="@id/windSpeedMeasurement"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    tools:text="340"
+                    android:layout_toRightOf="@id/windSpeedMeasurement" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/windLab"
+                    android:layout_below="@id/windLab"
+                    android:layout_toEndOf="@id/wind_deg"
+                    android:text="@string/deg"
+                    android:textColor="#9999A5"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@id/wind_deg" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
